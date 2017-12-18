@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import schalker.datamodule.models.Hero
 
 interface HotsService {
-    @GET("/heroes")
+    @GET("heroes")
     fun getHeroes(): Single<List<Hero>>
 }
