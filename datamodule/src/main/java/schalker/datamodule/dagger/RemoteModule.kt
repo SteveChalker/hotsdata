@@ -1,4 +1,4 @@
-package schalker.hotsdata.dagger
+package schalker.datamodule.dagger
 
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import dagger.Module
