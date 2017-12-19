@@ -31,12 +31,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':datamodule')
 
-    //ViewModel
-    implementation "android.arch.lifecycle:extensions:1.0.0"
-
-    //Injecting ViewModel https://github.com/alexfacciorusso/DaggerViewModel
-    implementation 'com.alexfacciorusso:daggerviewmodel:0.1.2'
-
     //Dagger
     api 'com.google.dagger:dagger:2.13'
     kapt 'com.google.dagger:dagger-compiler:2.13'

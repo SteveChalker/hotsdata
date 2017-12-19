@@ -53,6 +53,16 @@ dependencies {
     //stetho
     api 'com.facebook.stetho:stetho:1.5.0'
     api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    //room
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    kapt "android.arch.persistence.room:compiler:1.0.0"
+
+    //ViewModel
+    api "android.arch.lifecycle:extensions:1.0.0"
+
+    //Injecting ViewModel https://github.com/alexfacciorusso/DaggerViewModel
+    api 'com.alexfacciorusso:daggerviewmodel:0.1.2'
 }
 repositories {
     mavenCentral()
