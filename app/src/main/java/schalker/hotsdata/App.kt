@@ -12,7 +12,6 @@ class App : Application() {
     val appComponenent: AppComponent by lazy {
         DaggerAppComponent.builder().appModule(AppModule(this))
                 .remoteModule(RemoteModule("https://hotsapi.net/api/v1/"))
-                .localModule(LocalModule(this))
                 .build()
     }
 
