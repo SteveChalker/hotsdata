@@ -14,7 +14,7 @@ import schalker.datamodule.remote.HotsService
 import javax.inject.Singleton
 
 @Module
-class RemoteModule(private val baseUrl: String) {
+class DataModule(private val baseUrl: String) {
 
     @Provides
     @Singleton

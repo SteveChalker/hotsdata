@@ -6,11 +6,10 @@ import schalker.datamodule.Repository
 import schalker.datamodule.models.Hero
 import javax.inject.Inject
 
-class HeroListViewModel @Inject constructor() : ViewModel() {
+class HeroListViewModel @Inject constructor(val repository: Repository) : ViewModel() {
     val heroes: LiveData<List<Hero>> = repository.getHeroes()
-    @Inject lateinit var repository: Repository
 
-    fun fetchHeroes() = {
+    fun fetchHeroes() {
         repository.refreshData()
     }
 }
