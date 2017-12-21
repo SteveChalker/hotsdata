@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         heroListViewModel.heroes.observe(this, Observer<List<Hero>> { heroes ->
             heroes_list_text_view.text = heroes?.let {
-                if (it.isEmpty()) "Heroes not found" else it[0].name
+                if (it.isEmpty()) "Heroes not found" else it.joinToString(",", transform = {hero ->  hero.name})
             }
         })
 
