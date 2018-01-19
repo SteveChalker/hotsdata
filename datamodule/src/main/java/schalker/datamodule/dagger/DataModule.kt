@@ -41,4 +41,12 @@ class DataModule(private val baseUrl: String) {
     @Singleton
     @Provides
     fun providesHeroesDao(appDatabase: AppDatabase) = appDatabase.heroDao()
+
+    @Singleton
+    @Provides
+    fun providesAbilitiesDao(appDatabase: AppDatabase) = appDatabase.abilityDao()
+
+    @Singleton
+    @Provides
+    fun providesTalentsDao(appDatabase: AppDatabase) = appDatabase.talentDao()
 }
