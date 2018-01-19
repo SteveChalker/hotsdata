@@ -10,7 +10,7 @@ data class Ability(@PrimaryKey(autoGenerate = true) val id: Long,
                    val name: String,
                    val title: String,
                    val description: String,
-                   val hotKey: String,
+                   val hotKey: String?,
                    val cooldown: Int,
                    @SerializedName("mana_cost") val manaCost: Int,
                    val trait: Boolean

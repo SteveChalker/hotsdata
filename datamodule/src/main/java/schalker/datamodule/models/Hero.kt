@@ -22,8 +22,8 @@ data class Hero(@PrimaryKey(autoGenerate = true) val id: Long,
     val icon: HeroIcon? = null
 
     @Ignore
-    val abilities: List<Ability>? = null
+    val abilities: List<Ability> = emptyList()
 
     @Ignore
-    val talents: List<Talent>? = null
+    val talents: List<Talent> = emptyList()
 }
