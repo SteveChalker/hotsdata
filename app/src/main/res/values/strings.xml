@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HotsData</string>
+    <string name="no_heroes_found">No Heroes Found</string>
+    <string name="fetch_heroes">Fetch Heroes</string>
 </resources>
