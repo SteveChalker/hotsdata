@@ -6,8 +6,7 @@ import android.arch.persistence.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "talent")
-data class Talent(@PrimaryKey(autoGenerate = true) val id: Long,
-                  val name: String,
+data class Talent(@PrimaryKey val name: String,
                   val title: String,
                   val description: String,
                   var owner: String,

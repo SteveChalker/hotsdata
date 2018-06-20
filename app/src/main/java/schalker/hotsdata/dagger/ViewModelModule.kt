@@ -5,7 +5,7 @@ import com.alexfacciorusso.daggerviewmodel.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import schalker.hotsdata.HeroListViewModel
+import schalker.hotsdata.heroeslist.HeroListViewModel
 
 @Module
 abstract class ViewModelModule {
