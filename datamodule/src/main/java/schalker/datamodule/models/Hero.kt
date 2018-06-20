@@ -7,8 +7,7 @@ import com.google.gson.annotations.SerializedName
 import java.util.*
 
 @Entity(tableName = "hero")
-data class Hero(@PrimaryKey(autoGenerate = true) val id: Long,
-                val name: String,
+data class Hero(@PrimaryKey val name: String,
                 @SerializedName("short_name")val shortName: String,
                 @SerializedName("attribute_id")val attributeId: String,
                 val role: String,

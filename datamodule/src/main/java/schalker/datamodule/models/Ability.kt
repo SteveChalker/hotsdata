@@ -5,12 +5,12 @@ import android.arch.persistence.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "ability")
-data class Ability(@PrimaryKey(autoGenerate = true) val id: Long,
+data class Ability(val id: Long,
                    val owner: String,
                    val name: String,
-                   val title: String,
+                   @PrimaryKey val title: String,
                    val description: String,
-                   val hotKey: String?,
+                   val hotkey: String?,
                    val cooldown: Int,
                    @SerializedName("mana_cost") val manaCost: Int,
                    val trait: Boolean
