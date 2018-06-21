@@ -7,12 +7,12 @@ import com.google.gson.annotations.SerializedName
 import java.util.*
 
 @Entity(tableName = "hero")
-data class Hero(@PrimaryKey val name: String,
-                @SerializedName("short_name")val shortName: String,
-                @SerializedName("attribute_id")val attributeId: String,
-                val role: String,
-                val type: String,
-                @SerializedName("release_date")val releaseDate: String
+data class Hero(@PrimaryKey var name: String = "",
+                @SerializedName("short_name")var shortName: String = "",
+                @SerializedName("attribute_id")var attributeId: String = "",
+                var role: String = "",
+                var type: String = "",
+                @SerializedName("release_date")var releaseDate: String = ""
                 ) {
 
     //Room/kotlin does not like the ignore annotation in the constructor need to figure out why

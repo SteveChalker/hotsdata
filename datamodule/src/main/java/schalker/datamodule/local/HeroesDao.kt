@@ -10,11 +10,14 @@ import schalker.datamodule.models.Hero
 @Dao
 interface HeroesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertHeroes(vararg heroes: Hero)
+    fun insertHero(vararg heroes: Hero)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertHeroes(heroes: List<Hero>)
 
     @Query("SELECT * FROM hero")
     fun getAllHeroes(): LiveData<List<Hero>>
+
+    @Query("SELECT * FROM hero WHERE name = :name")
+    fun getHeroByName(name: String): LiveData<List<Hero>>
 }
