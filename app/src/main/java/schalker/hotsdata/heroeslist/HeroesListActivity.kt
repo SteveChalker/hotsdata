@@ -19,7 +19,7 @@ class HeroesListActivity : AppCompatActivity() {
     @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var heroListViewModel: HeroListViewModel
     private lateinit var viewManager: RecyclerView.LayoutManager
-    private lateinit var viewAdapter: HeroListAdapter
+    @Inject lateinit var viewAdapter: HeroListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (application as App).appComponenent.inject(this)
@@ -36,14 +36,14 @@ class HeroesListActivity : AppCompatActivity() {
             } else {
                 no_heroes_found_tv.visibility = View.GONE
                 hero_recycler_view.visibility = View.VISIBLE
-                viewAdapter.setHeroList(heroes ?: arrayListOf())
+                viewAdapter.setHeroList(heroes)
             }
         })
 
         fetch_heroes.setOnClickListener { heroListViewModel.fetchHeroes() }
 
+        //TODO inject view manager
         viewManager = LinearLayoutManager(this)
-        viewAdapter = HeroListAdapter(arrayListOf())
         hero_recycler_view.apply {
             setHasFixedSize(true)
             layoutManager = viewManager

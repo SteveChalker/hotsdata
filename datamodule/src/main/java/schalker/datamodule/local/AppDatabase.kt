@@ -7,7 +7,7 @@ import schalker.datamodule.models.Ability
 import schalker.datamodule.models.Hero
 import schalker.datamodule.models.Talent
 
-@Database(entities = arrayOf(Hero::class, Ability::class, Talent::class), version = 1)
+@Database(entities = [(Hero::class), (Ability::class), (Talent::class)], version = 1)
 @TypeConverters(Converters::class)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun heroDao(): HeroesDao
